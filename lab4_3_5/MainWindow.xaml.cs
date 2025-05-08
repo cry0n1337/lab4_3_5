@@ -8,14 +8,14 @@ namespace FuelCalculatorApp
         public MainWindow()
         {
             InitializeComponent();
-            CalculateButton.Click += CalculateButton_Click; // Дополнительная привязка события
+            CalculateButton.Click += CalculateButton_Click; 
         }
 
         private void CalculateButton_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                // Добавляем проверку на пустые поля
+             
                 if (string.IsNullOrWhiteSpace(LitersTextBox.Text))
                 {
                     MessageBox.Show("Введите количество топлива!", "Ошибка",
@@ -52,7 +52,7 @@ namespace FuelCalculatorApp
         {
             if (Radio1Km.IsChecked == true) return 1;
             if (Radio5Km.IsChecked == true) return 5;
-            return 20; // По умолчанию 20 км
+            return 20; 
         }
     }
 }
